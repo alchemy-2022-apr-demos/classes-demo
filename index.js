@@ -16,6 +16,7 @@ class Stack {
 
   pop() {
     // remove an item from the "top" of the list
+    return this.#list.pop();
   }
 
   peek() {

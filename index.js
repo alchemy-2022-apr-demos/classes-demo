@@ -2,11 +2,16 @@ class Stack {
   #list;
 
   constructor(list) {
-    this.#list = list;
+    this.#list = list || [];
+  }
+
+  get count() {
+    return this.#list.length;
   }
 
   push(newItem) {
     // add a new item to the list
+    this.#list.push(newItem);
   }
 
   pop() {
@@ -15,6 +20,7 @@ class Stack {
 
   peek() {
     // show the next item to be removed
+    return this.#list[this.#list.length - 1];
   }
 }
 
